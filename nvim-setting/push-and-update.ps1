@@ -5,7 +5,7 @@ git push
 
 # 2. push が成功したら、init.lua を AppData にコピーする
 if ($LASTEXITCODE -eq 0) {
-    $sourcePath = "$env:USERPROFILE\src\any-settings\nvim-settings\init.lua"
+    $sourcePath = "$env:USERPROFILE\src\any-settings\nvim-setting\init.lua"
     $destPath = "$env:LOCALAPPDATA\nvim\init.lua"
     Copy-Item $sourcePath $destPath -Force
     Write-Host "init.lua copied to $destPath"
