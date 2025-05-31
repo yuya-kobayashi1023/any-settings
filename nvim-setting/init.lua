@@ -1,3 +1,5 @@
+-- nvim settings
+
 -- visible line number
 vim.opt.number = true
 
