@@ -1,9 +1,7 @@
-# push-and-sync.ps1
-
-# 1. push する
+# execute push
 git push
 
-# 2. push が成功したら、init.lua を AppData にコピーする
+# overwrite setting
 if ($LASTEXITCODE -eq 0) {
     $sourcePath = "$env:USERPROFILE\src\any-settings\nvim-setting\init.lua"
     $destPath = "$env:LOCALAPPDATA\nvim\init.lua"
