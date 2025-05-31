@@ -1,23 +1,23 @@
--- 行番号表示
+-- visible line number
 vim.opt.number = true
 
--- タブ幅設定
+--tab and indent settings
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
--- character code
+-- char code
 vim.scriptencoding = 'utf-8'
 vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 
--- shellをpowershellに
+-- ps is default 
 vim.opt.shell = 'powershell'
 vim.opt.shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command'
 vim.opt.shellquote = ''
 vim.opt.shellxquote = ''
 
--- 不可視文字の表示
+-- invisible
 vim.opt.list = true
 vim.opt.listchars = {
   tab = "→ ",
@@ -26,7 +26,7 @@ vim.opt.listchars = {
   eol = "↴",
 }
 
--- lazy.nvim初期化
+-- lazy.nvim initialize
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -37,7 +37,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- プラグイン読み込み
+-- load plugin
 require("lazy").setup({
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 
