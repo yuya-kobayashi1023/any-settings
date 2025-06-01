@@ -1,5 +1,8 @@
 -- nvim settings
 
+-- overwrite key configs
+vim.keymap.set("i", "jj", "<Esc>", { noremap = true, silent = true })
+
 -- visible line number
 vim.opt.number = true
 
